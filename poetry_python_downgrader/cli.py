@@ -1,5 +1,6 @@
 """Command-line interface for poetry-python-downgrader."""
 
+from __future__ import annotations
 import asyncio
 import logging
 from pathlib import Path

@@ -6,7 +6,7 @@ authors = ["rizerphe <44440399+rizerphe@users.noreply.github.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.7"
 click = "^8.1.7"
 toml = "^0.10.2"
 aiohttp = "^3.9.5"

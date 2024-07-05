@@ -1,5 +1,6 @@
 """An interface to PyPI for fetching package information."""
 
+from __future__ import annotations
 import logging
 
 import aiohttp
