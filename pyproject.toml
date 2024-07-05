@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "poetry-python-downgrader"
+version = "0.1.0"
+description = ""
+authors = ["rizerphe <44440399+rizerphe@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "^8.1.7"
+toml = "^0.10.2"
+aiohttp = "^3.9.5"
+poetry-core = "^1.9.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+pytest-asyncio = "^0.23.7"
+types-toml = "^0.10.8.20240310"
+pytest-aiohttp = "^1.0.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+downgrade-pyproject-for-python = 'poetry_python_downgrader.cli:main'
