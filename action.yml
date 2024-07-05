@@ -10,10 +10,19 @@ inputs:
         description: "Python version to downgrade packages for."
         required: true
         default: "3.6"
+    pin-versions:
+        description: "Pin versions of packages."
+        required: false
+        default: "false"
+    repository:
+        description: "Repository to use."
+        required: false
+        default: "https://pypi.org/pypi"
 runs:
     using: "docker"
     image: "Dockerfile"
     args:
         - ${{ inputs.pyproject-path }}
         - ${{ inputs.python-version }}
-        - "-i"
+        - ${{ inputs.pin-versions }}
+        - ${{ inputs.repository }}
