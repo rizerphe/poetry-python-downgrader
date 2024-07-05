@@ -18,13 +18,11 @@ logger = logging.getLogger(__name__)
 @click.argument(
     "pin_versions",
     type=bool,
-    help="Pin versions of packages to the latest compatible version",
     default=False,
 )
 @click.argument(
     "repository",
     type=str,
-    help="Custom repository URL",
     default="https://pypi.org/pypi",
 )
 def main(
