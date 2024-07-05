@@ -1,0 +1,19 @@
+name: "Poetry python downgrader"
+author: "@rizerphe"
+description: "Downgrade poetry packages for compatibility with specific Python versions."
+inputs:
+    pyproject-path:
+        description: "Path to the pyproject.toml file."
+        required: true
+        default: "pyproject.toml"
+    python-version:
+        description: "Python version to downgrade packages for."
+        required: true
+        default: "3.6"
+runs:
+    using: "docker"
+    image: "Dockerfile"
+    args:
+        - ${{ inputs.pyproject-path }}
+        - ${{ inputs.python-version }}
+        - "-i"
