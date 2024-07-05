@@ -2,7 +2,7 @@
 
 A tool to downgrade Poetry packages for compatibility with specific Python versions.
 
-[![PyPI version](https://badge.fury.io/py/poetry-python-downgrader.svg)](https://badge.fury.io/py/poetry-python-downgrader) [![Build](https://github.com/rizerphe/poetry-python-downgrader/actions/workflows/build.yml/badge.svg)](https://github.com/rizerphe/poetry-python-downgrader/actions/workflows/build.yml) [![As a github action](https://img.shields.io/badge/As_a_github_action-black?logo=GitHub%20Actions&logoColor=white)](https://github.com/rizerphe/poetry-python-downgrader-action)
+[![Build](https://github.com/rizerphe/poetry-python-downgrader/actions/workflows/build.yml/badge.svg)](https://github.com/rizerphe/poetry-python-downgrader/actions/workflows/build.yml) [![Coverage Status](https://coveralls.io/repos/github/rizerphe/poetry-python-downgrader/badge.svg?branch=main)](https://coveralls.io/github/rizerphe/poetry-python-downgrader?branch=main) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![PyPI version](https://badge.fury.io/py/poetry-python-downgrader.svg)](https://badge.fury.io/py/poetry-python-downgrader) [![As a github action](https://img.shields.io/badge/As_a_github_action-black?logo=GitHub%20Actions&logoColor=white)](https://github.com/rizerphe/poetry-python-downgrader-action)
 
 This project is also available [as a GitHub Action](https://github.com/rizerphe/poetry-python-downgrader-action)!
 
