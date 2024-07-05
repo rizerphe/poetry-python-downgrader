@@ -38,10 +38,13 @@ def main(
     if target_python_version.startswith("pypy"):
         target_python_version = target_python_version[4:]
 
-    # Now, we check whether the python version is valid, and return an error if it is not
+    # Now, we check whether the python version is valid, and return if it is not
     if not target_python_version.startswith("3."):
-        click.echo(f"Unsupported Python version: {target_python_version}", err=True)
-        raise click.Abort()  # Oh hey that's the third secret way to exit from a script
+        click.echo(
+            f"Unsupported Python version: {target_python_version}; downgrade cancelled",
+            err=True,
+        )
+        return
 
     updated_pyproject = process_pyproject(
         pyproject_path, target_python_version, pin_versions, repository
