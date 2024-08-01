@@ -12,9 +12,9 @@ from .pypi import get_compatible_versions
 logger = logging.getLogger(__name__)
 
 
-def get_constraint(constraint: Any) -> str:
+def get_constraint(constraint: Any) -> str | None:
     """Get the version constraint from a dependency."""
-    return constraint if isinstance(constraint, str) else constraint["version"]
+    return constraint if isinstance(constraint, str) else constraint.get("version")
 
 
 def min_version(constraint: str) -> Version | None:
@@ -40,6 +40,10 @@ async def versions_for_all(
             continue
 
         version_constraint = get_constraint(constraint)
+
+        if version_constraint is None:
+            logger.warning("No version constraint found for %s", package)
+            continue
 
         tasks.append(
             get_compatible_versions(
